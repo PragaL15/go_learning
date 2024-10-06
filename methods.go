@@ -17,7 +17,7 @@ func main(){
 	func (u User) GetAge(){
 		fmt.Println(u.Age)
 	}
- func (u User) ChangeName(){
-	u.Name = "Nagul"
-	fmt.Println(u.Name)
- }
+	func (u *User) ChangeName() {
+    u.Name = "Nagul" // Now this change affects the original User
+    fmt.Println(u.Name)
+}
